@@ -1,3 +1,3 @@
 export default {
-  api_url: 'http://localhost:3131',
+  api_url: 'http://kisitlamavarmi-api.sunucum.cloud',
 }
