@@ -1,5 +1,16 @@
 <template>
-  <div :style="'--status-color: ' + $store.state.currentCity.status.color">
+  <div
+    :style="
+      '--status-color: ' +
+      $store.state.currentCity.status.color +
+      '; --sc-r: ' +
+      hexToRgb($store.state.currentCity.status.color).r +
+      '; --sc-g: ' +
+      hexToRgb($store.state.currentCity.status.color).g +
+      '; --sc-b: ' +
+      hexToRgb($store.state.currentCity.status.color).b
+    "
+  >
     <div
       class="city-title text-5xl p-2 font-semibold italic text-white rounded-xl rounded-b-none"
     >
@@ -36,7 +47,20 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    hexToRgb(hex) {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+      return result
+        ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16),
+          }
+        : null
+    },
+  },
+}
 </script>
 
 <style lang="scss">
