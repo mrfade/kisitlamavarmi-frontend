@@ -20,6 +20,10 @@ export default {
         content:
           'Bugün kısıtlama var mı? Şehrimde kısıtlamalar var mı? Sokağa çıkabilir miyim?',
       },
+      {
+        name: 'google-site-verification',
+        content: 'hC3d1uzBgd7iXwC0g8L70A2vklvuyEYgapZ1Y98qPos',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
