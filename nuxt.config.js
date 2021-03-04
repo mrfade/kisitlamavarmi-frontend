@@ -40,6 +40,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/moment',
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -57,5 +58,9 @@ export default {
   moment: {
     defaultLocale: 'tr',
     locales: ['tr'],
+  },
+
+  googleAnalytics: {
+    id: 'UA-191133826-1',
   },
 }
